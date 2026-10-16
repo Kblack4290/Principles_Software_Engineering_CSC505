@@ -14,9 +14,8 @@ class ActiveTasksList:
         else:
             print(f"Task '{task}' not found in active tasks.")
     
-    def modify_task(self, task):
+    def edit_task(self, task, new_task):
         if task in self.active_tasks:
-            new_task = input(f"Enter the new description for task '{task}': ")
             index = self.active_tasks.index(task)
             self.active_tasks[index] = new_task
             print(f"Task '{task}' has been updated to '{new_task}'.")

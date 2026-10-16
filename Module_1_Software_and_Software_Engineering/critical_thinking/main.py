@@ -39,9 +39,9 @@ def display_menu():
         for task in active_tasks_list.get_active_tasks():
             print(f"- {task}")
         
-        select_action = input("Enter A to add a task or C to complete a task: ").upper()
+        select_action = input("Enter A to add a task, C to complete a task, or E to edit a task: ").upper()
         
-        if select_action != "A" and select_action != "C":
+        if select_action != "A" and select_action != "C" and select_action != "E":
             print("Invalid choice. Returning to menu.")
             display_menu()
             
@@ -55,6 +55,20 @@ def display_menu():
         if select_action == "C":
             task_to_complete = input("Enter the task you would like to mark as completed: ")
             active_tasks_list.complete_task(task_to_complete)
+            display_menu()
+        
+        if select_action == "E":
+            task_to_edit = input("Enter the task you would like to edit: ")
+            
+            if task_to_edit not in active_tasks_list.get_active_tasks():
+                print(f"Task '{task_to_edit}' not found in active tasks.")
+                display_menu()
+                return
+            
+            new_task = input("Enter the new task: ")
+            active_tasks_list.edit_task(task_to_edit, new_task)
+            for task in active_tasks_list.get_active_tasks():
+                print(f"- {task}")
             display_menu()
             
         
