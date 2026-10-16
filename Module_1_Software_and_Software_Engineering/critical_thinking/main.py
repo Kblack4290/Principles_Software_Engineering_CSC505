@@ -1,5 +1,7 @@
 import sys
 from datetime import datetime
+from active_tasks_list import ActiveTasksList
+#from completed_tasks_list import CompletedTasksList
 
 
 # Planning to create a task tracker
@@ -10,6 +12,9 @@ from datetime import datetime
 #Get users name
 user_name = input("Please enter your name: ")
 todays_date = datetime.now().strftime("%Y-%m-%d")
+
+active_tasks_list = ActiveTasksList()
+#completed_tasks_list = CompletedTasksList()
 
 # There will be a menu to view the active tasks and completed tasks 
     #Menu option will be View Active Tasks, View Completed Tasks, and Exit 
@@ -31,6 +36,29 @@ def display_menu():
     choice = input("Please select an option: ").upper()
     if choice == "A":
         print("Viewing Active Tasks...")
+        for task in active_tasks_list.get_active_tasks():
+            print(f"- {task}")
+        
+        add_task = input("Do you want to add a new task? (y/n): ")
+        if add_task.lower() != "y" and add_task.lower() != "n":
+            print("Invalid choice. Returning to menu.")
+            display_menu()
+            
+        if add_task.lower() == "y":
+            new_task = input("Enter the task you would like to add: ")
+            active_tasks_list.add_task(new_task)
+            for task in active_tasks_list.get_active_tasks():
+                print(f"- {task}")
+            display_menu()
+        
+        if add_task.lower() == "n":
+            display_menu()
+        
+        
+        
+        
+            
+        
     elif choice == "C":
         print("Viewing Completed Tasks...")
     elif choice == "Q":
