@@ -9,7 +9,7 @@ from active_tasks_list import ActiveTasksList
 # This app will help users manage their tasks
 # The users will be able to add, update, complete, and delete tasks
 
-#Get users name
+# Get users name
 user_name = input("Please enter your name: ")
 todays_date = datetime.now().strftime("%Y-%m-%d")
 
@@ -39,28 +39,28 @@ def display_menu():
         for task in active_tasks_list.get_active_tasks():
             print(f"- {task}")
         
-        add_task = input("Do you want to add a new task? (y/n): ")
-        if add_task.lower() != "y" and add_task.lower() != "n":
+        select_action = input("Enter A to add a task or C to complete a task: ").upper()
+        
+        if select_action != "A" and select_action != "C":
             print("Invalid choice. Returning to menu.")
             display_menu()
             
-        if add_task.lower() == "y":
+        if select_action== "A":
             new_task = input("Enter the task you would like to add: ")
             active_tasks_list.add_task(new_task)
             for task in active_tasks_list.get_active_tasks():
                 print(f"- {task}")
             display_menu()
         
-        if add_task.lower() == "n":
+        if select_action == "C":
+            task_to_complete = input("Enter the task you would like to mark as completed: ")
+            active_tasks_list.complete_task(task_to_complete)
             display_menu()
-        
-        
-        
-        
             
         
     elif choice == "C":
         print("Viewing Completed Tasks...")
+        
     elif choice == "Q":
         print("Exiting...")
         sys.exit()
