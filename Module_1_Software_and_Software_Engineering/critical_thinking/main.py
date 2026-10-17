@@ -1,6 +1,7 @@
 from datetime import datetime
 from active_tasks_list import ActiveTasksList
 from completed_tasks_list import CompletedTasksList
+from dynamic_menu import DynamicMenu
 
 
 # Planning to create a task tracker
@@ -14,6 +15,7 @@ from completed_tasks_list import CompletedTasksList
 
 active_tasks_list = ActiveTasksList()
 completed_tasks_list = CompletedTasksList()
+
 
 # There will be a menu to view the active tasks and completed tasks 
     #Menu option will be View Active Tasks, View Completed Tasks, and Exit 
@@ -40,14 +42,11 @@ def main():
     
 def display_menu():
     
-    menu = {"A": "View Active Tasks", "C": "View Completed Tasks", "Q": "Quit"}
-    print("\n" + "="*50 + "\n")
-    print(f"\033[1;35m MENU \033[0m".center(25))
-    print()
-    for key, value in menu.items():
-        print(f"{key}. {value}")
-    print("\n" + "="*50 + "\n")
-    return input("Please select an option: ").upper()
+    dynamic_menu = DynamicMenu(
+        menu_options={"A": "View Active Tasks", "C": "View Completed Tasks", "Q": "Quit"},
+        menu_type="Main Menu"
+    )
+    return dynamic_menu.display_template()
     
 def handle_active_tasks():
     print("Viewing Active Tasks...")
