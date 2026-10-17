@@ -13,10 +13,9 @@ class ActiveTasksList:
     def complete_task(self, task):
         if task in self.active_tasks:
             self.active_tasks.remove(task)
-            print(f"Task '{task}' marked as completed.")
-        else:
-            print(f"Task '{task}' not found in active tasks.")
-    
+            return True
+        return False
+
     def edit_task(self, task, new_task):
         if task in self.active_tasks:
             index = self.active_tasks.index(task)

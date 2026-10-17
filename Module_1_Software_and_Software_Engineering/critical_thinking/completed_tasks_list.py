@@ -4,8 +4,7 @@ class CompletedTasksList:
     
     def __init__(self):
         self.completed_tasks = list()
-        self.active_tasks_list = ActiveTasksList()
-        
+                
     def add_completed_task(self, task):
         self.completed_tasks.append(task)
         print(f"Task '{task}' added to completed tasks.")
