@@ -3,10 +3,6 @@ from active_tasks_list import ActiveTasksList
 from completed_tasks_list import CompletedTasksList
 from dynamic_menu import DynamicMenu
 
-
-# Planning to create a task tracker
-# The app will display a menu to manage active and completed tasks
-
 # Initialize the active and completed tasks lists
 active_tasks_list = ActiveTasksList()
 completed_tasks_list = CompletedTasksList()
@@ -21,28 +17,30 @@ def main():
     print(f"\033[1;35m Hi {user_name}! Welcome back to the Todo App!\033[0m".center(50))
     print(f"\033[1;34m Today's date is {todays_date}\033[0m".center(50))
     
+    # Display the main menu and handle user input in a loop
+    # The loop will continue until the user chooses to quit
     while True:
         menu_option = display_menu()
         if menu_option =="A":
-            handle_active_tasks()  # Call a function to handle active tasks actions
+            handle_active_tasks()  # Handle actions related to active tasks
             
         elif menu_option == "C":
-            handle_completed_tasks()  # Call a function to handle completed tasks actions
+            handle_completed_tasks()  # Handle actions related to completed tasks
         elif menu_option == "Q":
             print("Have a great day!")
             break
         else:
             print("Invalid menu option. Please try again.")
         
-    
+# Function to display the main menu and return the user's choice
 def display_menu():
-    
     dynamic_menu = DynamicMenu(
         menu_options={"A": "View Active Tasks", "C": "View Completed Tasks", "Q": "Quit"},
         menu_type="Main Menu"
     )
     return dynamic_menu.display_template()
-    
+
+# Function to run a submenu for managing tasks (active or completed)
 def run_submenu(menu, actions, get_tasks, title):
     while True:
         print(f"\nViewing {title}...")
@@ -59,7 +57,7 @@ def run_submenu(menu, actions, get_tasks, title):
         prompts, method = actions[choice]
         method(*[input(prompt) for prompt in prompts])
 
-
+# Function to handle actions related to active tasks
 def handle_active_tasks():
     # key -> (prompts whose answers are passed to the method, method to call)
     actions = {
@@ -77,7 +75,7 @@ def handle_active_tasks():
     )
     run_submenu(menu, actions, active_tasks_list.get_active_tasks, "Active Tasks")
 
-
+# Function to handle actions related to completed tasks
 def handle_completed_tasks():
     actions = {
         "D": (("Enter the task you would like to delete: ",),
@@ -91,7 +89,6 @@ def handle_completed_tasks():
         menu_type="Completed Tasks",
     )
     run_submenu(menu, actions, completed_tasks_list.get_completed_tasks, "Completed Tasks")
-
 
 
 if __name__ == "__main__":
