@@ -5,20 +5,15 @@ from dynamic_menu import DynamicMenu
 
 
 # Planning to create a task tracker
+# The app will display a menu to manage active and completed tasks
 
-# This app will help users manage their tasks
-# The users will be able to add, update, complete, and delete tasks
-
-# Get users name
-
-
-
+# Initialize the active and completed tasks lists
 active_tasks_list = ActiveTasksList()
 completed_tasks_list = CompletedTasksList()
 
+# Main function to run the task tracker application
+# This function will display the main menu and handle user interactions
 
-# There will be a menu to view the active tasks and completed tasks 
-    #Menu option will be View Active Tasks, View Completed Tasks, and Exit 
 def main():
     user_name = input("Please enter your name: ")
     todays_date = datetime.now().strftime("%Y-%m-%d")
@@ -48,68 +43,56 @@ def display_menu():
     )
     return dynamic_menu.display_template()
     
+def run_submenu(menu, actions, get_tasks, title):
+    while True:
+        print(f"\nViewing {title}...")
+        for task in get_tasks():
+            print(f"- {task}")
+
+        choice = menu.display_template()
+        if choice == "Q":
+            break
+        if choice not in actions:
+            print("Invalid choice. Please try again.")
+            continue
+
+        prompts, method = actions[choice]
+        method(*[input(prompt) for prompt in prompts])
+
+
 def handle_active_tasks():
-    print("Viewing Active Tasks...")
-    for task in active_tasks_list.get_active_tasks():
-        print(f"- {task}")
-        
-    select_action = input("Enter A to add a task, C to complete a task, or E to edit a task: ").upper()
-        
-    if select_action != "A" and select_action != "C" and select_action != "E":
-        print("Invalid choice. Returning to menu.")
-        display_menu()
-            
-    if select_action== "A":
-        new_task = input("Enter the task you would like to add: ")
-        active_tasks_list.add_task(new_task)
-        for task in active_tasks_list.get_active_tasks():
-            print(f"- {task}")
-        display_menu()
-        
-    if select_action == "C":
-        completed_task = input("Enter the task you would like to mark as completed: ")
-        if active_tasks_list.complete_task(completed_task):
-            completed_tasks_list.add_completed_task(completed_task)
-            print(f"Task '{completed_task}' marked as completed and moved to completed tasks.")
-        else:
-            print(f"Task '{completed_task}' not found.")
-        display_menu()
-        
-    if select_action == "E":
-        task_to_edit = input("Enter the task you would like to edit: ")
-            
-        if task_to_edit not in active_tasks_list.get_active_tasks():
-            print(f"Task '{task_to_edit}' not found in active tasks.")
-            display_menu()
-            return
-            
-        new_task = input("Enter the new task: ")
-        active_tasks_list.edit_task(task_to_edit, new_task)
-        for task in active_tasks_list.get_active_tasks():
-            print(f"- {task}")
-        display_menu()
+    # key -> (prompts whose answers are passed to the method, method to call)
+    actions = {
+        "A": (("Enter the task you would like to add: ",),
+            active_tasks_list.add_task),
+        "C": (("Enter the task you would like to mark as completed: ",),
+            lambda task: active_tasks_list.complete_task(task, completed_tasks_list)),
+        "E": (("Enter the task you would like to edit: ", "Enter the new task: "),
+            active_tasks_list.edit_task),
+    }
+    menu = DynamicMenu(
+        menu_options={"A": "Add a task", "C": "Complete a task",
+                    "E": "Edit a task", "Q": "Quit to main menu"},
+        menu_type="Active Tasks",
+    )
+    run_submenu(menu, actions, active_tasks_list.get_active_tasks, "Active Tasks")
 
 
 def handle_completed_tasks():
-    print("Viewing Completed Tasks...")
-    for completed_task in completed_tasks_list.get_completed_tasks():
-        print(f"- {completed_task}")
-        
-    select_action = input("Enter D to delete a task or M to move a task back to active: ").upper()
+    actions = {
+        "D": (("Enter the task you would like to delete: ",),
+            completed_tasks_list.delete_task),
+        "M": (("Enter the task you would like to move back to active: ",),
+            lambda task: completed_tasks_list.move_to_active(task, active_tasks_list)),
+    }
+    menu = DynamicMenu(
+        menu_options={"D": "Delete a task", "M": "Move a task back to active",
+                    "Q": "Quit to main menu"},
+        menu_type="Completed Tasks",
+    )
+    run_submenu(menu, actions, completed_tasks_list.get_completed_tasks, "Completed Tasks")
 
-    if select_action != "D" and select_action != "M":
-        print("Invalid choice. Returning to menu.")
-        display_menu()
 
-    if select_action == "D":
-        task_to_delete = input("Enter the task you would like to delete: ")
-        completed_tasks_list.delete_task(task_to_delete)
-        display_menu()
 
-    if select_action == "M":
-        task_to_move = input("Enter the task you would like to move back to active: ")
-        completed_tasks_list.move_to_active(task_to_move, active_tasks_list)
-        display_menu()
-    
 if __name__ == "__main__":
     main()

@@ -10,11 +10,13 @@ class ActiveTasksList:
         self.active_tasks.append(task)
         print(f"Task '{task}' added to active tasks.")
 
-    def complete_task(self, task):
+    def complete_task(self, task, completed_tasks_list):
         if task in self.active_tasks:
             self.active_tasks.remove(task)
-            return True
-        return False
+            completed_tasks_list.add_completed_task(task)
+            print(f"Task '{task}' marked as completed and moved to completed tasks.")
+        else:
+            print(f"Task '{task}' not found in active tasks.")
 
     def edit_task(self, task, new_task):
         if task in self.active_tasks:
