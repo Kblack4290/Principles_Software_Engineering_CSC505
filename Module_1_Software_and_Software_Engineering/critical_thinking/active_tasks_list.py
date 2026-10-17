@@ -1,3 +1,6 @@
+# The Active todo class will display the list of active tasks
+    # They will be able to add new tasks to the list and mark the tasks as completed
+
 class ActiveTasksList:
     
     def __init__(self):
@@ -24,6 +27,3 @@ class ActiveTasksList:
         
     def get_active_tasks(self):
         return self.active_tasks
-    
-    
-    

@@ -1,7 +1,7 @@
-import sys
+import sys 
 from datetime import datetime
 from active_tasks_list import ActiveTasksList
-#from completed_tasks_list import CompletedTasksList
+from completed_tasks_list import CompletedTasksList
 
 
 # Planning to create a task tracker
@@ -14,7 +14,7 @@ user_name = input("Please enter your name: ")
 todays_date = datetime.now().strftime("%Y-%m-%d")
 
 active_tasks_list = ActiveTasksList()
-#completed_tasks_list = CompletedTasksList()
+completed_tasks_list = CompletedTasksList()
 
 # There will be a menu to view the active tasks and completed tasks 
     #Menu option will be View Active Tasks, View Completed Tasks, and Exit 
@@ -53,8 +53,9 @@ def display_menu():
             display_menu()
         
         if select_action == "C":
-            task_to_complete = input("Enter the task you would like to mark as completed: ")
-            active_tasks_list.complete_task(task_to_complete)
+            completed_task = input("Enter the task you would like to mark as completed: ")
+            active_tasks_list.complete_task(completed_task)
+            completed_tasks_list.add_completed_task(completed_task)
             display_menu()
         
         if select_action == "E":
@@ -74,23 +75,31 @@ def display_menu():
         
     elif choice == "C":
         print("Viewing Completed Tasks...")
+        for completed_task in completed_tasks_list.get_completed_tasks():
+            print(f"- {completed_task}")
         
+        select_action = input("Enter D to delete a task or M to move a task back to active: ").upper()
+
+        if select_action != "D" and select_action != "M":
+            print("Invalid choice. Returning to menu.")
+            display_menu()
+
+        if select_action == "D":
+            task_to_delete = input("Enter the task you would like to delete: ")
+            completed_tasks_list.delete_task(task_to_delete)
+            display_menu()
+
+        if select_action == "M":
+            task_to_move = input("Enter the task you would like to move back to active: ")
+            completed_tasks_list.move_to_active(task_to_move, active_tasks_list)
+            display_menu()
+            
     elif choice == "Q":
         print("Exiting...")
         sys.exit()
     else:
         print("Invalid choice. Please try again.")
         display_menu()
-    
-
-
-# The Active todo class will display the list of active tasks
-    # They will be able to add new tasks to the list and mark the tasks as completed
-
-# The Completed todo class will display the list of completed tasks
-    # They will be able to delete tasks from the list and move tasks back to the active list
-    
-    
     
 if __name__ == "__main__":
     main()
