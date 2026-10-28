@@ -1,0 +1,101 @@
+<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLObject</id><coordinates><x>0</x><y>0</y><w>1365</w><h>1535</h></coordinates><panel_attributes>Black Adaptive Model
+
+valign=top
+fontsize=42</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>540</x><y>180</y><w>205</w><h>75</h></coordinates><panel_attributes>Communication
+bg=cyan
+fontsize=28</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>605</x><y>75</y><w>75</w><h>60</h></coordinates><panel_attributes>type=initial
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>540</x><y>515</y><w>205</w><h>75</h></coordinates><panel_attributes>Modeling
+bg=cyan
+fontsize=28
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>540</x><y>345</y><w>205</w><h>75</h></coordinates><panel_attributes>Planning
+bg=cyan
+fontsize=28
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>610</x><y>650</y><w>60</w><h>55</h></coordinates><panel_attributes>type=decision
+bg=blue
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>540</x><y>1155</y><w>205</w><h>75</h></coordinates><panel_attributes>Demo and Feedback
+bg=Gray
+fontsize=28
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>540</x><y>755</y><w>205</w><h>75</h></coordinates><panel_attributes>Construction
+bg=cyan
+fontsize=28
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>615</x><y>880</y><w>60</w><h>55</h></coordinates><panel_attributes>type=decision
+bg=blue
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>615</x><y>1285</y><w>60</w><h>55</h></coordinates><panel_attributes>type=decision
+bg=blue
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>635</x><y>250</y><w>15</w><h>105</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>635</x><y>130</y><w>15</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>635</x><y>420</y><w>15</w><h>105</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>635</x><y>585</y><w>15</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>635</x><y>695</y><w>15</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>925</y><w>15</w><h>75</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>820</y><w>15</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>1060</y><w>15</w><h>105</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>1225</y><w>15</w><h>75</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>1330</y><w>15</w><h>75</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>85</x><y>195</y><w>545</w><h>1125</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>910;20;10;10;10;2230;1070;2230</additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>1275</y><w>135</w><h>35</h></coordinates><panel_attributes>valign=center
+halign=center
+fontsize=24
+More Increments
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>645</x><y>1350</y><w>135</w><h>35</h></coordinates><panel_attributes>valign=center
+halign=center
+fontsize=24
+No More Increments
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>945</y><w>135</w><h>35</h></coordinates><panel_attributes>valign=center
+halign=center
+fontsize=24
+All tests Pass
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>900</y><w>340</w><h>25</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>660;30;10;20</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>1000</x><y>890</y><w>60</w><h>55</h></coordinates><panel_attributes>type=decision
+bg=blue
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>875</y><w>135</w><h>35</h></coordinates><panel_attributes>valign=center
+halign=center
+fontsize=24
+Test Fails
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>745</x><y>785</y><w>295</w><h>115</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;20;570;20;570;210</additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>555</y><w>585</w><h>375</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;10;1150;20;1150;730;630;720</additional_attributes></element><element><id>UMLClass</id><coordinates><x>845</x><y>760</y><w>135</w><h>35</h></coordinates><panel_attributes>valign=center
+halign=center
+fontsize=24
+Code Defect
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1180</x><y>725</y><w>135</w><h>35</h></coordinates><panel_attributes>valign=center
+halign=center
+fontsize=24
+Design Flaw
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>705</y><w>135</w><h>35</h></coordinates><panel_attributes>valign=center
+halign=center
+fontsize=24
+No Prototype Needed
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>665</y><w>235</w><h>20</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>10;20;450;20</additional_attributes></element><element><id>UMLState</id><coordinates><x>240</x><y>650</y><w>155</w><h>55</h></coordinates><panel_attributes>Prototype Review
+bg=gray
+fontsize=28
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>545</y><w>240</w><h>115</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+lw=2
+</panel_attributes><additional_attributes>460;20;10;20;10;210</additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>640</y><w>135</w><h>35</h></coordinates><panel_attributes>valign=center
+halign=center
+fontsize=24
+Needs Prototype
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>520</y><w>135</w><h>35</h></coordinates><panel_attributes>valign=center
+halign=center
+fontsize=24
+Revised Design
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>600</x><y>1400</y><w>90</w><h>80</h></coordinates><panel_attributes>type=final</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>540</x><y>990</y><w>205</w><h>75</h></coordinates><panel_attributes>Deployment
+bg=cyan
+fontsize=28</panel_attributes><additional_attributes></additional_attributes></element></diagram>
