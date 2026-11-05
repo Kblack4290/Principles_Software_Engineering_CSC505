@@ -1,0 +1,133 @@
+<diagram program="umletino" version="15.1"><zoom_level>14</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLNote</id><coordinates><x>504</x><y>0</y><w>854</w><h>70</h></coordinates><panel_attributes>halign=center
+bg=dark_gray
+fg=white
+fontsize=18
+Shopping List Mobile App - UML Component Diagram
+(Presentation -&gt; Controller/Logic -&gt; Data, plus optional extensions)
+</panel_attributes><additional_attributes /></element><element><id>UMLClass</id><coordinates><x>0</x><y>112</y><w>1876</w><h>210</h></coordinates><panel_attributes>bg=#142952
+valign=top
+halign=left
+fontsize=18
+Presentation Layer (User Interface)</panel_attributes><additional_attributes /></element><element><id>UMLClass</id><coordinates><x>0</x><y>378</y><w>1876</w><h>238</h></coordinates><panel_attributes>bg=#006737
+valign=top
+halign=left
+fontsize=18
+Controller / Logic Layer</panel_attributes><additional_attributes /></element><element><id>UMLClass</id><coordinates><x>0</x><y>686</y><w>1876</w><h>378</h></coordinates><panel_attributes>bg=#502002
+valign=top
+halign=left
+fontsize=18
+Data Layer
+</panel_attributes><additional_attributes /></element><element><id>UMLClass</id><coordinates><x>0</x><y>1106</y><w>1876</w><h>210</h></coordinates><panel_attributes>bg=#396d69
+valign=top
+halign=left
+fontsize=18
+Optional Extensions</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>28</x><y>154</y><w>280</w><h>126</h></coordinates><panel_attributes>symbol=component
+bg=blue
+halign=center
+*Home Screen*
+&lt;&lt;component&gt;&gt;
+entry point, list overview</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>336</x><y>154</y><w>280</w><h>126</h></coordinates><panel_attributes>symbol=component
+bg=blue
+halign=center
+*Add Item Screen*
+&lt;&lt;component&gt;&gt;
+name, qty, price, notes</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>644</x><y>154</y><w>280</w><h>126</h></coordinates><panel_attributes>symbol=component
+bg=blue
+halign=center
+*Edit / Delete Screen*
+&lt;&lt;component&gt;&gt;
+modify or remove items</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>952</x><y>154</y><w>280</w><h>126</h></coordinates><panel_attributes>symbol=component
+bg=blue
+halign=center
+*View List Screen*
+&lt;&lt;component&gt;&gt;
+sorted items, total cost</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>1568</x><y>154</y><w>280</w><h>126</h></coordinates><panel_attributes>symbol=component
+bg=blue
+halign=center
+*Settings / About*
+&lt;&lt;component&gt;&gt;
+preferences, app info</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>28</x><y>434</y><w>336</w><h>140</h></coordinates><panel_attributes>symbol=component
+bg=green
+halign=center
+*Navigation Controller*
+&lt;&lt;component&gt;&gt;
+screen routing &amp; back stack</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>420</x><y>434</y><w>336</w><h>140</h></coordinates><panel_attributes>symbol=component
+bg=green
+halign=center
+*List Controller*
+&lt;&lt;component&gt;&gt;
+add / edit / remove / check off,
+input validation</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>812</x><y>434</y><w>336</w><h>140</h></coordinates><panel_attributes>symbol=component
+bg=green
+halign=center
+*Sort &amp; Filter Service*
+&lt;&lt;component&gt;&gt;
+order by name / category / status</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>1204</x><y>434</y><w>336</w><h>140</h></coordinates><panel_attributes>symbol=component
+bg=green
+halign=center
+*Settings Manager*
+&lt;&lt;component&gt;&gt;
+theme, units, budget limit</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>420</x><y>728</y><w>336</w><h>84</h></coordinates><panel_attributes>symbol=component
+bg=red
+halign=center
+*Shopping List Repository*
+&lt;&lt;component&gt;&gt;
+data-access API</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>420</x><y>840</y><w>336</w><h>84</h></coordinates><panel_attributes>symbol=component
+bg=red
+halign=center
+*Local Storage (SQLite)*
+&lt;&lt;datastore&gt;&gt;
+on-device</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>1204</x><y>728</y><w>336</w><h>84</h></coordinates><panel_attributes>symbol=component
+bg=red
+halign=center
+*Preferences Store*
+&lt;&lt;datastore&gt;&gt;
+key-value settings</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>1204</x><y>1162</y><w>336</w><h>98</h></coordinates><panel_attributes>symbol=component
+bg=cyan
+lt=.
+halign=center
+*Notification Service*
+&lt;&lt;component&gt;&gt;
+reminders &amp; budget alerts</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>154</x><y>266</y><w>70</w><h>196</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;10;30;120</additional_attributes></element><element><id>Relation</id><coordinates><x>462</x><y>266</y><w>84</w><h>196</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;10;40;120</additional_attributes></element><element><id>Relation</id><coordinates><x>644</x><y>266</y><w>168</w><h>196</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>100;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>994</x><y>266</y><w>126</w><h>196</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>70;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>742</x><y>490</y><w>98</w><h>42</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>574</x><y>560</y><w>42</w><h>196</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>574</x><y>798</y><w>42</w><h>70</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>1358</x><y>560</y><w>42</w><h>196</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>42</x><y>308</y><w>42</w><h>154</h></coordinates><panel_attributes>lt=.&gt;
+fg=#3d6e30</panel_attributes><additional_attributes>10;88;10;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>1260</x><y>154</y><w>280</w><h>126</h></coordinates><panel_attributes>symbol=component
+bg=blue
+lt=.
+halign=center
+*View Purchase*
+*History Screen*
+&lt;&lt;component&gt;&gt;
+past trips, re-add items</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>420</x><y>952</y><w>336</w><h>84</h></coordinates><panel_attributes>symbol=component
+bg=red
+lt=.
+halign=center
+*Purchase History Store*
+&lt;&lt;datastore&gt;&gt;
+past purchases</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>812</x><y>1162</y><w>336</w><h>98</h></coordinates><panel_attributes>symbol=component
+bg=cyan
+lt=.
+halign=center
+*Price &amp; Budget Service*
+&lt;&lt;component&gt;&gt;
+item prices, total, budget check</panel_attributes><additional_attributes /></element><element><id>UMLGeneric</id><coordinates><x>420</x><y>1162</y><w>336</w><h>98</h></coordinates><panel_attributes>symbol=component
+bg=cyan
+lt=.
+halign=center
+*Purchase History Service*
+&lt;&lt;component&gt;&gt;
+record trips, frequent items</panel_attributes><additional_attributes /></element><element><id>Relation</id><coordinates><x>1414</x><y>266</y><w>336</w><h>196</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>219;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>1094</x><y>266</y><w>320</w><h>182</h></coordinates><panel_attributes>lt=.&gt;
+fg=#777777
+group=group-3</panel_attributes><additional_attributes>219;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>278</x><y>560</y><w>208</w><h>686</h></coordinates><panel_attributes>lt=.&gt;
+fg=#777777
+group=group-3</panel_attributes><additional_attributes>139;10;139;65;10;65;10;480;101;480</additional_attributes></element><element><id>Relation</id><coordinates><x>322</x><y>756</y><w>112</w><h>426</h></coordinates><panel_attributes>lt=.&gt;
+fg=#777777
+group=group-3</panel_attributes><additional_attributes>70;294;10;294;10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>366</x><y>778</y><w>68</w><h>230</h></coordinates><panel_attributes>lt=.&gt;
+fg=#777777
+group=group-3</panel_attributes><additional_attributes>39;10;10;10;10;154;39;154</additional_attributes></element><element><id>Relation</id><coordinates><x>658</x><y>560</y><w>288</w><h>616</h></coordinates><panel_attributes>lt=.&gt;
+fg=#777777
+group=group-3</panel_attributes><additional_attributes>10;10;10;85;196;85;196;430</additional_attributes></element><element><id>Relation</id><coordinates><x>742</x><y>788</y><w>84</w><h>418</h></coordinates><panel_attributes>lt=.&gt;
+fg=#777777
+group=group-3</panel_attributes><additional_attributes>50;289;30;289;30;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>560</y><w>576</w><h>616</h></coordinates><panel_attributes>lt=.&gt;
+fg=#777777
+group=group-3</panel_attributes><additional_attributes>10;10;10;65;333;65;333;409;401;409;401;430</additional_attributes></element><element><id>Relation</id><coordinates><x>1134</x><y>1197</y><w>84</w><h>28</h></coordinates><panel_attributes>lt=.&gt;
+fg=#777777
+group=group-3</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element></diagram>
