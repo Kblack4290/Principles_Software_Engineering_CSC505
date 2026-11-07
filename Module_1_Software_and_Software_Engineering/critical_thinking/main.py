@@ -3,44 +3,24 @@ from active_tasks_list import ActiveTasksList
 from completed_tasks_list import CompletedTasksList
 from dynamic_menu import DynamicMenu
 
-# Initialize the active and completed tasks lists
+# Shared task lists used by every menu handler
 active_tasks_list = ActiveTasksList()
 completed_tasks_list = CompletedTasksList()
 
-# Main function to run the task tracker application
-# This function will display the main menu and handle user interactions
+# Terminal color codes for headings and dates
+HEADING_COLOR = "\033[1;35m"
+DATE_COLOR = "\033[1;34m"
+RESET_COLOR = "\033[0m"
 
-def main():
-    user_name = input("Please enter your name: ")
-    todays_date = datetime.now().strftime("%Y-%m-%d")
-    
-    print(f"\033[1;35m Hi {user_name}! Welcome back to the Todo App!\033[0m".center(50))
-    print(f"\033[1;34m Today's date is {todays_date}\033[0m".center(50))
-    
-    # Display the main menu and handle user input in a loop
-    # The loop will continue until the user chooses to quit
-    while True:
-        menu_option = display_menu()
-        if menu_option =="A":
-            handle_active_tasks()  # Handle actions related to active tasks
-            
-        elif menu_option == "C":
-            handle_completed_tasks()  # Handle actions related to completed tasks
-        elif menu_option == "Q":
-            print("Have a great day!")
-            break
-        else:
-            print("Invalid menu option. Please try again.")
-        
-# Function to display the main menu and return the user's choice
+# Display the main menu and return the user's choice
 def display_menu():
     dynamic_menu = DynamicMenu(
         menu_options={"A": "View Active Tasks", "C": "View Completed Tasks", "Q": "Quit"},
-        menu_type="Main Menu"
+        menu_type="Main Menu",
     )
     return dynamic_menu.display_template()
 
-# Function to run a submenu for managing tasks (active or completed)
+# Run a submenu for a specific task list (active or completed)
 def run_submenu(menu, actions, get_tasks, title):
     while True:
         print(f"\nViewing {title}...")
@@ -57,38 +37,67 @@ def run_submenu(menu, actions, get_tasks, title):
         prompts, method = actions[choice]
         method(*[input(prompt) for prompt in prompts])
 
-# Function to handle actions related to active tasks
+# Handle the Active Tasks submenu
 def handle_active_tasks():
-    # key -> (prompts whose answers are passed to the method, method to call)
+    # Create the actions and menu for the Active Tasks submenu
     actions = {
         "A": (("Enter the task you would like to add: ",),
-            active_tasks_list.add_task),
+              active_tasks_list.add_task),
         "C": (("Enter the task you would like to mark as completed: ",),
-            lambda task: active_tasks_list.complete_task(task, completed_tasks_list)),
+              lambda task: active_tasks_list.complete_task(task, completed_tasks_list)),
         "E": (("Enter the task you would like to edit: ", "Enter the new task: "),
-            active_tasks_list.edit_task),
+              active_tasks_list.edit_task),
     }
     menu = DynamicMenu(
         menu_options={"A": "Add a task", "C": "Complete a task",
-                    "E": "Edit a task", "Q": "Quit to main menu"},
+                      "E": "Edit a task", "Q": "Quit to main menu"},
         menu_type="Active Tasks",
     )
     run_submenu(menu, actions, active_tasks_list.get_active_tasks, "Active Tasks")
 
-# Function to handle actions related to completed tasks
+# Handle the Completed Tasks submenu
 def handle_completed_tasks():
     actions = {
         "D": (("Enter the task you would like to delete: ",),
-            completed_tasks_list.delete_task),
+              completed_tasks_list.delete_task),
         "M": (("Enter the task you would like to move back to active: ",),
-            lambda task: completed_tasks_list.move_to_active(task, active_tasks_list)),
+              lambda task: completed_tasks_list.move_to_active(task, active_tasks_list)),
     }
     menu = DynamicMenu(
         menu_options={"D": "Delete a task", "M": "Move a task back to active",
-                    "Q": "Quit to main menu"},
+                      "Q": "Quit to main menu"},
         menu_type="Completed Tasks",
     )
     run_submenu(menu, actions, completed_tasks_list.get_completed_tasks, "Completed Tasks")
+
+
+# Main menu key -> function that handles it ("Q" is handled separately in main)
+MAIN_MENU_HANDLERS = {
+    "A": handle_active_tasks,
+    "C": handle_completed_tasks,
+}
+
+# Display the welcome message with the user's name and today's date
+def show_welcome(user_name):
+    todays_date = datetime.now().strftime("%Y-%m-%d")
+    print(f"{HEADING_COLOR} Hi {user_name}! Welcome back to the Todo App!{RESET_COLOR}".center(50))
+    print(f"{DATE_COLOR} Today's date is {todays_date}{RESET_COLOR}".center(50))
+
+# Main function to run the task tracker application
+def main():
+    user_name = input("Please enter your name: ")
+    show_welcome(user_name)
+
+    while True:
+        menu_option = display_menu()
+        if menu_option == "Q":
+            print("Have a great day!")
+            break
+        handler = MAIN_MENU_HANDLERS.get(menu_option)
+        if handler is None:
+            print("Invalid menu option. Please try again.")
+            continue
+        handler()
 
 
 if __name__ == "__main__":
