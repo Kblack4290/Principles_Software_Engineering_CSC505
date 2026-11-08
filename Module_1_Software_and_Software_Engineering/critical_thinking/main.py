@@ -1,3 +1,8 @@
+"""Terminal Task Tracker: a command-line to-do list with active and completed tasks.
+
+Run with:  python main.py
+"""
+
 from datetime import datetime
 from active_tasks_list import ActiveTasksList
 from completed_tasks_list import CompletedTasksList
@@ -14,6 +19,7 @@ RESET_COLOR = "\033[0m"
 
 # Display the main menu and return the user's choice
 def display_menu():
+    """Show the main menu and return the user's choice (upper case)."""
     dynamic_menu = DynamicMenu(
         menu_options={"A": "View Active Tasks", "C": "View Completed Tasks", "Q": "Quit"},
         menu_type="Main Menu",
@@ -22,6 +28,15 @@ def display_menu():
 
 # Run a submenu for a specific task list (active or completed)
 def run_submenu(menu, actions, get_tasks, title):
+    """Run a task submenu until the user chooses Q.
+
+    Args:
+        menu (DynamicMenu): The submenu to display each loop.
+        actions (dict): Maps a menu key to (prompts, method). The answers to the
+            prompts are passed to the method as positional arguments.
+        get_tasks (callable): Returns the tasks to list above the menu.
+        title (str): Name of the list being shown, used in the heading.
+    """
     while True:
         print(f"\nViewing {title}...")
         for task in get_tasks():
@@ -39,6 +54,7 @@ def run_submenu(menu, actions, get_tasks, title):
 
 # Handle the Active Tasks submenu
 def handle_active_tasks():
+    """Run the Active Tasks submenu (add, complete, and edit tasks)."""
     # Create the actions and menu for the Active Tasks submenu
     actions = {
         "A": (("Enter the task you would like to add: ",),
@@ -57,6 +73,7 @@ def handle_active_tasks():
 
 # Handle the Completed Tasks submenu
 def handle_completed_tasks():
+    """Run the Completed Tasks submenu (delete or reopen tasks)."""
     actions = {
         "D": (("Enter the task you would like to delete: ",),
               completed_tasks_list.delete_task),
@@ -79,12 +96,14 @@ MAIN_MENU_HANDLERS = {
 
 # Display the welcome message with the user's name and today's date
 def show_welcome(user_name):
+    """Print the welcome banner with the user's name and today's date."""
     todays_date = datetime.now().strftime("%Y-%m-%d")
     print(f"{HEADING_COLOR} Hi {user_name}! Welcome back to the Todo App!{RESET_COLOR}".center(50))
     print(f"{DATE_COLOR} Today's date is {todays_date}{RESET_COLOR}".center(50))
 
 # Main function to run the task tracker application
 def main():
+    """Greet the user, then show the main menu until they choose to quit."""
     user_name = input("Please enter your name: ")
     show_welcome(user_name)
 
