@@ -1,0 +1,40 @@
+<diagram program="umletino" version="15.1"><zoom_level>13</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>299</x><y>26</y><w>1274</w><h>806</h></coordinates><panel_attributes>*PHTRS: Pothole Tracking and Repair System*
+bg=#e9eef5
+valign=top
+halign=center
+fontsize=16</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>338</x><y>91</y><w>260</w><h>91</h></coordinates><panel_attributes>View Report Status
+bg=#5aa9ff
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>338</x><y>247</y><w>260</w><h>91</h></coordinates><panel_attributes>Upload Photo
+bg=#6fd08c
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>338</x><y>455</y><w>260</w><h>91</h></coordinates><panel_attributes>Report Pothole
+bg=#5aa9ff
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>338</x><y>650</y><w>260</w><h>91</h></coordinates><panel_attributes>Submit Damage Claim
+bg=#5aa9ff
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>806</x><y>351</y><w>260</w><h>91</h></coordinates><panel_attributes>Log In
+bg=#ffb84d
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>1274</x><y>91</y><w>260</w><h>91</h></coordinates><panel_attributes>View/Filter Potholes
+bg=#5aa9ff
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>1274</x><y>247</y><w>260</w><h>91</h></coordinates><panel_attributes>Generate Reports
+bg=#5aa9ff
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>1274</x><y>455</y><w>260</w><h>91</h></coordinates><panel_attributes>Assign Repair Crew
+bg=#5aa9ff
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>1274</x><y>650</y><w>260</w><h>91</h></coordinates><panel_attributes>Update Repair Status
+bg=#5aa9ff
+fontsize=12</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>156</x><y>351</y><w>78</w><h>143</h></coordinates><panel_attributes>Citizen</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>1612</x><y>325</y><w>182</w><h>143</h></coordinates><panel_attributes>Public Works Admin</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>1651</x><y>728</y><w>104</w><h>143</h></coordinates><panel_attributes>Repair Crew</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>858</x><y>897</y><w>156</w><h>143</h></coordinates><panel_attributes>Notification Service</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>182</x><y>390</y><w>221</w><h>104</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;148;60</additional_attributes></element><element><id>Relation</id><coordinates><x>182</x><y>169</y><w>273</w><h>260</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;178;184;10</additional_attributes></element><element><id>Relation</id><coordinates><x>182</x><y>390</y><w>273</w><h>299</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;187;201</additional_attributes></element><element><id>Relation</id><coordinates><x>1443</x><y>169</y><w>286</w><h>234</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>197;159;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1469</x><y>364</y><w>260</w><h>130</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>173;10;10;78</additional_attributes></element><element><id>Relation</id><coordinates><x>1430</x><y>364</y><w>299</w><h>325</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>207;10;10;221</additional_attributes></element><element><id>Relation</id><coordinates><x>1495</x><y>312</y><w>234</w><h>104</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>159;51;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1495</x><y>715</y><w>234</w><h>104</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>159;51;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>494</x><y>533</y><w>468</w><h>442</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>333;318;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>715</y><w>442</w><h>260</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>312;173;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>923</x><y>533</y><w>468</w><h>442</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;318;333;10</additional_attributes></element><element><id>Relation</id><coordinates><x>923</x><y>715</y><w>442</w><h>260</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;173;312;10</additional_attributes></element><element><id>Relation</id><coordinates><x>559</x><y>403</y><w>286</w><h>104</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;include&gt;&gt;</panel_attributes><additional_attributes>10;52;197;10</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>156</y><w>364</w><h>221</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;include&gt;&gt;</panel_attributes><additional_attributes>10;10;257;147</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>429</y><w>377</w><h>260</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;include&gt;&gt;</panel_attributes><additional_attributes>10;175;268;10</additional_attributes></element><element><id>Relation</id><coordinates><x>988</x><y>156</y><w>364</w><h>221</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;include&gt;&gt;</panel_attributes><additional_attributes>257;10;10;147</additional_attributes></element><element><id>Relation</id><coordinates><x>1027</x><y>403</y><w>286</w><h>104</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;include&gt;&gt;</panel_attributes><additional_attributes>197;52;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>988</x><y>429</y><w>377</w><h>260</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;include&gt;&gt;</panel_attributes><additional_attributes>268;175;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1027</x><y>299</y><w>286</w><h>104</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;include&gt;&gt;</panel_attributes><additional_attributes>197;10;10;52</additional_attributes></element><element><id>Relation</id><coordinates><x>455</x><y>325</y><w>104</w><h>156</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extend&gt;&gt;</panel_attributes><additional_attributes>10;10;10;94</additional_attributes></element><element><id>UMLNote</id><coordinates><x>299</x><y>858</y><w>390</w><h>169</h></coordinates><panel_attributes>Notes
+- Log In is included by every use case
+  that needs a signed-in user.
+- Upload Photo is optional, so it extends
+  Report Pothole.
+- Notification Service is an assumed
+  secondary actor.
+bg=#ffe99a
+fontsize=10
+halign=left</panel_attributes><additional_attributes></additional_attributes></element></diagram>
