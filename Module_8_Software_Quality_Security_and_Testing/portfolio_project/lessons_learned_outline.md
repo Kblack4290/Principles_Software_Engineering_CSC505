@@ -41,10 +41,13 @@ CSC505 Module 8 Portfolio Project (CSC505_M08_PP)
 - IEEE defines software engineering as a systematic, disciplined, quantifiable approach to development and maintenance.
 - Software engineering is a layered technology with quality as its focus and process as its foundation.
 - Thesis preview: process → people and agility → requirements and design → quality, security, and testing.
+- Optional framing hook from lecture 1.4: the seven common development problems and the six best practices. These are iterate, manage requirements, use component architectures, model visually, verify quality, and control change. The rest of the course is roughly a deep dive into each practice, so you can name them here and show in the conclusion that you covered all six.
 
 **Sources cited here:**
 
 - Pressman & Maxim (2020), p. 9 (course page 1.2): the IEEE definition and the layered technology, with its quality focus and process foundation.
+- Pressman & Maxim (2020), p. 10 (course page 1.3): a process is adaptable, and the team tailors it to the project.
+- Lecture 1.4: the seven problems and six best practices. This is a course page, so cite the textbook chapter or leave the framing uncited.
 
 ---
 
@@ -69,7 +72,8 @@ CSC505 Module 8 Portfolio Project (CSC505_M08_PP)
 **Sources cited here:**
 
 - Pressman & Maxim (2020), p. 7 (course page 1.1): software categories and legacy software cost.
-- Pressman & Maxim (2020): Waterfall limitations. Reuse the citations from your Module 2 paper.
+- Pressman & Maxim (2020), p. 26: the Waterfall sequence. Reuse your Module 2 paper's citations for the three limitations.
+- Pressman & Maxim (2020), p. 34 (lecture 2.4): too little process hurts the product, and obsessive overreliance on process is also dangerous. This is a good line for showing balance.
 - Hachemi (2020), Section 2, "Process Patterns Reuse," pp. 37–38: process patterns reuse, including reuse for modification of an existing model.
 
 ---
@@ -96,7 +100,8 @@ CSC505 Module 8 Portfolio Project (CSC505_M08_PP)
 
 - Beck et al. (2001), the Manifesto for Agile Software Development: the four values. Optional, and counts as a credible non-textbook reference.
 - Pressman & Maxim (2020): Agile, Scrum, and prototyping. Reuse your Module 3 citations.
-- Pressman & Maxim (2020): engineer traits and team communication. Reuse your Module 4 paper's citations.
+- Pressman & Maxim (2020), Ch. 5, pp. 74–81: engineer traits and team communication.
+- Sutherland et al. (2020): Scrum Essentials cards, about teams improving their Scrum practice. Optional, and credible (ACM Queue). Use it only if you want a second Scrum source.
 - Kabbur et al. (2020), Section 4.3, "Increasing attention to results," p. 69: silo thinking, scorecards, and weekly project reviews.
 
 ---
@@ -130,7 +135,11 @@ CSC505 Module 8 Portfolio Project (CSC505_M08_PP)
 - Chanin et al. (2019), Section IV, "Conclusions," p. 32: collaborative practices enhance requirements gathering.
 - Pressman & Maxim (2020), p. 186 (course page 6.3): architectural prototype or "walking skeleton."
 - Pressman & Maxim (2020), p. 196 (course page 6.4): scope of architecture decisions.
-- Pressman & Maxim (2020) (course pages 6.2, 7.1–7.3): the design concepts list and the UI golden rules.
+- Pressman & Maxim (2020) (course page 6.2): the design concepts list.
+- Pressman & Maxim (2020), Ch. 11, p. 207: definition of a component.
+- Pressman & Maxim (2020), Ch. 11, pp. 212–214: the open-closed principle and dependency inversion.
+- Pressman & Maxim (2020), Ch. 11, pp. 216–218: cohesion and coupling.
+- Pressman & Maxim (2020), Ch. 12, p. 238: the UI golden rules.
 
 ---
 
@@ -187,10 +196,13 @@ CSC505 Module 8 Portfolio Project (CSC505_M08_PP)
 - **Quality and security from day one:** AI tools touch company data, so threat modeling and SQA thinking apply directly. Ask who could misuse the tool and what data it can reach.
 - **People:** As the person others come to for AI, the Module 4 traits apply daily: honest limits, adaptability, and sharing knowledge instead of hoarding it.
 - **Personal habit change:** You now write docstrings and READMEs and state your design assumptions. Your Module 5 README is evidence of this.
+- **AI products need adapted UX and testing:** Kliman-Silver et al. (2020), the Module 7 required reading, argue that AI-driven products act with some autonomy, so their outputs are probabilistic rather than simply right or wrong. That makes explainability and trust central. This ties Module 7 UX to Module 8 testing and quality for the AI tools you build. It is the strongest non-textbook source for this section.
+- **DiWise Copilot:** Your Module Notes use it as a running example. It is a web and mobile app with an AI component, which makes it a Module 1 category question. An LLM provider behind an interface applies dependency inversion and the open-closed principle from Module 7. Use it as a second real-world application if you want one outside work.
 
 **Sources cited here:**
 
-- No new source is needed. Briefly refer back to concepts already cited, for example "(Pressman & Maxim, 2020)" for SQA and "(Kabbur et al., 2020)" for team trust.
+- Kliman-Silver et al. (2020): AI-driven experiences need adapted UX research methods, with an emphasis on explainability and trust.
+- Otherwise, refer back to concepts already cited, for example "(Pressman & Maxim, 2020)" for SQA and "(Kabbur et al., 2020)" for team trust.
 
 ---
 
@@ -225,7 +237,11 @@ Hachemi, A. (2020). Software development process modeling with patterns. In *Pro
 
 Kabbur, P. K., Mani, V. S., & Schuelein, J. (2020). Prioritizing trust in a globally distributed software engineering team to overcome complexity and make releases a non-event. In *Proceedings of the 15th IEEE/ACM International Conference on Global Software Engineering (ICGSE '20)* (pp. 66–70). Association for Computing Machinery. https://doi.org/10.1145/3372787.3390434
 
+Kliman-Silver, C., Siy, O., Awadalla, K., Lentz, A., Convertino, G., & Churchill, E. (2020). Adapting user experience research methods for AI-driven experiences. In *Extended abstracts of the 2020 CHI Conference on Human Factors in Computing Systems*. Association for Computing Machinery. https://doi.org/10.1145/3334480.3375231
+
 Pressman, R. S., & Maxim, B. R. (2020). *Software engineering: A practitioner's approach* (9th ed.). McGraw-Hill Education.
+
+Sutherland, J., Jacobson, I., & Kerr, B. (2020). Scrum essentials cards: Experiences of Scrum teams improving with Essence. *ACM Queue, 18*(3). *(Optional. Confirm the page or article number from the PDF.)*
 
 ---
 
@@ -238,7 +254,9 @@ Pressman, R. S., & Maxim, B. R. (2020). *Software engineering: A practitioner's 
 - Hachemi (2020): process patterns, and it connects to your Module 2 model
 - Chanin et al. (2019): collaborative requirements gathering
 
-These three give you the required two-plus non-textbook references. You have used Kabbur and Hachemi in earlier modules, so the citations are already familiar to you.
+- Kliman-Silver et al. (2020): the AI and UX link for Section 6.
+
+These four give you the required two-plus non-textbook references. You have used Kabbur and Hachemi in earlier modules, so the citations are already familiar to you.
 
 **Weak or no fit for a scholarly reference list:**
 
