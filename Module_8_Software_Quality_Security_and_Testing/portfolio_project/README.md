@@ -9,7 +9,7 @@ Submission name: `CSC505_M08_PP_Black_Keith.zip`
 | ATM UML diagram (UMLet) | `atm_state_diagram.uxf`, `atm_state_diagram.png` | Not started |
 | Python script that prints every ATM step in diagram order | `atm_simulation.py` | Not started |
 | Screenshots of a successful run | `screenshots/` | Not started |
-| Lessons Learned reflection (2–3 pages, APA) | `lessons_learned_outline.md` → `Black_Module8_Lessons_Learned.docx` | Outline drafted |
+| Lessons Learned reflection (2–3 pages, APA) | `lessons_learned_outline.md` → `Black_Module8_Lessons_Learned.docx` | Draft complete |
 
 ## Diagram Requirements
 
